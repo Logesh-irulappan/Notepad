@@ -1,0 +1,168 @@
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "left" "right";
+}
+
+.left-content {
+    grid-area: "left";
+    /* background-color: gray; */
+    background-color: whitesmoke; 
+    border-right: 2px ridge black;
+}
+
+.left-content h2 {
+    margin-top: 10px;
+    padding: 10px 10px; 
+    background: transparent; 
+    border-bottom: 2px ridge black;
+}
+
+.left-content .createNotepad {
+    display: flex;
+    height: 100%;
+    margin: 10px 10px;
+    margin-top: 40px;
+    flex-direction: column;
+    align-items: center;
+    background: transparent;
+}
+
+.createNotepad input {
+    height: 60px;
+    width: 100%;
+    border: none;
+    color: black;
+    font-size: 18px;
+    padding: 5px 5px;
+    outline: none;
+    background-color: goldenrod;
+}
+
+.createNotepad input::placeholder {
+    color: rgba(0, 0, 0, 0.744);
+}
+
+.createNotepad button {
+    margin-top: 20px;
+    height: 40px;
+    width: 90%;
+    color: black;
+    font-weight: 600;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    cursor: pointer;
+    background-color: goldenrod;
+}
+
+/* Left side content styles are finished */
+
+.right-content {
+    grid-area: "right";
+    height: 600px;
+    overflow: scroll;
+    background-color: whitesmoke;
+}
+
+.right-content h1 {
+    margin-left: 25px;
+    position: relative; top: 10px;
+    background: transparent;
+}
+
+.allNotes {
+    display: grid;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    grid-area: auto;
+    row-gap: 15px;
+    column-gap: 15px;
+    margin-left: 15px;
+    padding: 10px 10px;
+    background-color: whitesmoke;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.home-header {
+    display: flex;
+    align-items: center;
+    background: transparent;
+}
+
+.search-form {
+    width: 60%;
+    height: 40px;
+    margin-left: 20px;
+    /* background-color: gray; */
+    background: transparent;
+}
+
+#search-box {
+    height: 90%;
+    width: 40%;
+    margin-top: 5px;
+    border: none;
+    outline: none;
+    font-size: large;
+    padding-left: 10px;
+    border-radius: 7px;
+    margin-left: 20px;
+}
+
+#search-box::placeholder {
+    color: black;
+}
+
+.noteTab {
+    height: 250px;
+    width: 350px;
+    overflow: hidden;
+    padding: 10px 10px;
+    border-radius: 7px;
+    background-color: goldenrod;
+}
+
+.noteTab .tab-header {
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tab-header #title {
+    margin-top: 5px;
+    background: transparent;
+}
+
+.tab-header form {
+    background: transparent;
+}
+
+.tab-header img {
+    height: 25px;
+    width: 25px;
+    border-radius: 20px;
+    padding: 10px 10px;
+    border: 2px solid black;
+    cursor: pointer;
+    margin-bottom: 5px;
+    background: transparent;
+}
+
+.tab-header button {
+    border: none;
+    background: transparent;
+}
+
+.left-tab {
+    display: flex;
+    background: transparent;
+}
+
+.noteTab #content {
+    background: transparent;
+}

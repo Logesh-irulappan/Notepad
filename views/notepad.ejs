@@ -1,0 +1,31 @@
+
+<%- include('partials/header.ejs') %>
+<head><link rel="stylesheet" href="/styles/notepad.css"></head>
+
+<main>
+    <form class="backForm" action="/goBack" method="get">
+        <button type="submit">
+            <img src="/assets/arrow-left-solid.svg" alt="">
+        </button>
+    </form>
+    <div class="container-content">
+        <div class="container">
+            <form action="/submitNotepad" method="post">
+                <div class="first-content">
+                    <input type="text" name="title" id="title" value="<%= locals.title %>">
+                    <input type="text" name="submitId" value="<%= locals.id %>" hidden>
+                    <button type="submit">
+                        <img src="/assets/floppy-disk-regular.svg" alt="save img">
+                    </button>
+                </div>
+                <div class="notepad">
+                    <textarea name="content" id="contentTxt">
+                        <%= locals.content %>
+                    </textarea>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+
+<%- include('partials/footer.ejs') %>

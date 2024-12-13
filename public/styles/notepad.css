@@ -1,0 +1,98 @@
+
+main {
+    background-color: whitesmoke;
+}
+
+.container-content {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+}
+
+.backForm {
+    height: fit-content;
+    margin-top: 10px;
+    margin-left: 20px;
+    background: transparent;
+}
+
+.backForm button {
+    width: 40px;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+}
+
+.backForm button img {
+    background-color: transparent;
+}
+
+.container {
+    height: 480px;
+    width: 70%;
+    border-radius: 7px;
+    border: 8px ridge goldenrod;
+    background-color: whitesmoke;
+}
+
+.container form {
+    height: 100%;
+    width: 100%;
+    background: transparent;
+}
+
+.first-content {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    margin: 20px 20px;
+    border-bottom: 2px ridge rgba(0, 0, 0, 0.646);
+    justify-content: space-between;
+    background-color: whitesmoke;
+}
+
+.first-content button {
+    display: flex;
+    height: 35px;
+    width: 60px;
+    cursor: pointer; 
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    border: none;
+    border-radius: 7px;
+    background-color: goldenrod;
+}
+
+.first-content button img {
+    height: 20px;
+    width: 20px;
+    background-color: goldenrod;
+}
+
+.first-content #title {
+    outline: none;
+    font-size: 30px;
+    border: none;
+    background-color: transparent;
+}
+
+.notepad {
+    height: 75%;
+    margin-left: 20px;
+    margin-right: 20px;
+    background: transparent;
+}
+
+.notepad textarea {
+    width: 99%;
+    height: 100%;
+    resize: none;
+    outline: none;
+    cursor: pointer;
+    font-size: larger;
+    border: none;
+    background: transparent;
+}

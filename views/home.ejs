@@ -1,0 +1,48 @@
+
+<%- include('partials/header.ejs') %>
+<head><link rel="stylesheet" href="/styles/content.css"></head>
+
+<main>
+    <div class="left-content">
+        <h2>Create new Notepad</h2>
+        <form action="/createNote" class="createNotepad" method="post">
+            <input type="text" name="newTitle" placeholder="Enter new title here...">
+            <button type="submit">Create Notepad</button>
+        </form>
+    </div>
+    <div class="right-content">
+        <div class="home-header">
+            <h1>Available Notepad</h1>
+            <form class="search-form" action="">
+                <input type="text" placeholder="search notepad..." name="search-box" id="search-box">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+        <div class="allNotes">
+            <% for (let tabs of notes) { %>
+            <div class="noteTab">
+                <div class="tab-header">
+                    <h2 id="title"><%= tabs.title %></h2>
+                    <div class="left-tab">
+                        <form action="/editNote" method="post">
+                            <input name="selectedNote" value="<%= tabs.id %>" hidden>
+                            <button type="submit" id="editSubmit-Btn">
+                                <img id="editImg" src="/assets/marker-solid.svg" alt="edit logo" onclick="submit()">
+                            </button>
+                        </form>
+                        <form action="/deleteNote" method="post">
+                            <input name="selectedNote" value="<%= tabs.id %>" hidden>
+                            <button type="submit">
+                                <img src="/assets/trash-solid.svg" alt="Delete logo">
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <p id="content"><%= tabs.content %></p>
+            </div>
+            <% } %>
+        </div>
+    </div>
+</main>
+
+<%- include('partials/footer.ejs') %>

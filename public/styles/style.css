@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Mysuru:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    background-color: gray;
+    font-family: "Hind Mysuru", sans-serif;
+    font-style: normal;
+}
+
+body {
+    height: 99.5vh;
+    display: grid;
+    grid-template-rows: 1fr 5fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: "header"
+                         "main"
+                         "footer";
+}
+
+header {
+    color: white;
+    grid-area: "header";
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: goldenrod;
+}
+
+.left-header {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    gap: 20px;
+    background-color: transparent;
+}
+
+.left-header img {
+    height: 40px;
+    width: 40px;
+    background-color: transparent;
+}
+
+.left-header h1 {
+    position: relative; top: 6px;
+    background-color: transparent;
+}
+
+/* end of header styles */
+
+footer {
+    background: goldenrod;
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+footer p {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    background: transparent;
+}
+
+footer .social_icon {
+  display: flex;
+  position: relative; right: 20px;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0px;
+  background-color: goldenrod;
+}
+
+footer .social_icon li {
+  list-style: none;
+  background: transparent;
+}
+
+footer .social_icon li a {
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  background-color: goldenrod;
+}
+
+footer .social_icon li a img {
+    height: 30px;
+    width: 30px;   
+    background: transparent;
+}
+
+footer .social_icon li a:hover {
+  transform: translateY(-15px);
+}
+
+/* end of footer styles */
+
+main {
+    background-color: whitesmoke;
+}
+
+
